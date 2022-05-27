@@ -1,0 +1,22 @@
+<p>list-form works!</p>
+
+<form #todoForm="ngForm" (submit)="completeTodoForm(todoForm)">
+    <div class="centered">
+        <label> Email </label><br />
+        <input type="text" name="descrizione" #refDescrizione="ngModel" [ngModel]="insertedDescrizione" required /><br />
+    </div>
+    <div class="centered">
+        <label> Status </label><br />
+        <input type="text" name="status" #refStatus="ngModel" [ngModel]="insertedStatus"
+            required /><br />
+    </div>
+    <div class="centered">
+        <label> Data Creazione </label><br />
+        <input type="date" name="DataCreazione" #refDataCreazione="ngModel" [ngModel]="insertedDataCreazione" required /><br />
+    </div>
+    <div class="centered">
+        <label> Data scadenza </label><br />
+        <input type="date" name="DataScadenza" #refDataScadenza="ngModel" [ngModel]="insertedDataScadenza" required /><br />
+    </div>
+    <input class="login-button" type="submit" value="Crea" /><br />
+</form>

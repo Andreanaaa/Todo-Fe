@@ -1,0 +1,16 @@
+<h1>I tuoi TODO</h1>
+
+<table class="todo">
+    <th>Descrizione</th>
+    <th>Status</th>
+    <th>Data Creazione</th>
+    <th>Data Scadenza</th>
+    <tr *ngFor="let todo of allTodo">
+      <td>{{todo.descrizione}}</td>
+      <td>{{todo.status}}</td>
+      <td>{{todo.data_creazione}}</td>
+      <td>{{todo.data_scadenza}}</td>
+      <td><a (click)="optionHandler(todo.id)" href="javascript:void(0)">{{option}}</a></td>
+    </tr>
+  </table>
+  
